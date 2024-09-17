@@ -1,0 +1,144 @@
+/* Reset default body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Import the custom font */
+@font-face {
+    font-family: 'refuseniks';
+    src: url('./fonts/refuseniks-Regular-BF66e3a35fb567e.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'refuseniks';
+    src: url('./fonts/refuseniks-Bold-BF66e3a35f13c43.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'refuseniks';
+    src: url('./fonts/refuseniks-Thin-BF66e3a35fdbfa2.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Styling the Banner */
+#Banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;  /* Set height relative to viewport height */
+}
+
+/* Styling the Banner Title */
+#Title-Section {
+    width: 45%;
+    padding-top: 5vh;
+    margin-left: 25%;
+    font-family: 'refuseniks', sans-serif;
+    font-size: 6vh;
+    color: rgb(50, 50, 50);
+}
+
+#CoffeeGrinder {
+    font-family: 'refuseniks';
+    font-size: 7.5vh;
+    color: rgb(243, 119, 18);
+}
+
+/* Styling the Banner Image */
+#Banner-Image {
+    width: 50%;                     
+    height: 100%;                    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#Banner-Image img {
+    max-height: 100%;                
+    width: auto;                     
+    object-fit: contain;             
+}
+
+/* Styling the Menu Section */
+#Menu {
+    display: flex;                   /* Use Flexbox for centering */
+    flex-direction: column;          /* Stack children vertically */
+    align-items: center;             /* Horizontally center children */
+    justify-content: flex-start;     /* Align children to the top */
+    height: 50vh;                    
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+}
+
+/* Styling the Section Title */
+.Section-Title {
+    font-family: 'refuseniks', sans-serif;
+    font-size: 3vh;
+    color: rgb(243, 119, 18);
+    text-align: center;             
+}
+
+.Menu-Contents {
+    font-family: refuseniks, sans-serif;
+    width: 90%;                     
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: flex-start;      
+}
+
+#Drinks-Section, #Food-Section {
+    font-family: 'refuseniks', sans-serif;
+    font-weight: bold;
+    width: 50%;                     
+}
+
+ul li {
+    list-style: none;
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px dotted #ffffff;
+    padding: 5px 0;
+}
+
+.item-name {
+    font-size: 16px;
+}
+
+.item-price {
+    margin-left: 10px;
+}
+
+#Food-Section .item-content {
+    border-bottom: 3px dotted #ffffff; 
+}
+
+/* Bento Box Section */
+#Bento-Box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    background-color: rgb(240, 240, 240); /* Optional: background color */
+}
+
+/* Bento Box Item */
+.bento-item {
+    overflow: hidden; /* Ensure images don't overflow their container */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.bento-item img {
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space from images */
+}
+
