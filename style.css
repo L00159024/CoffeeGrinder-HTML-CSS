@@ -224,4 +224,43 @@ ul li {
     height: auto;
 }
 
+#Goals {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;             
+    box-sizing: border-box;
+}
+
+#Goal-Img {
+    grid-column: 1; 
+    grid-row: 1;
+}
+
+.Goal-image {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 90%;  
+    height: auto; 
+    justify-self: center; 
+}
+
+#Goal-Section {
+    font-family: 'refuseniks', sans-serif;
+    font-size: 3vh;
+    color: rgb(50, 50, 50);
+    grid-column: 2;  
+    align-self: center;  
+}
+
+#Goal-Section h1 {
+    font-family: 'refuseniks', sans-serif;
+    font-weight: bold;
+    font-size: 7vh;
+    color: rgb(243, 119, 18);
+}
 
