@@ -121,24 +121,60 @@ ul li {
     border-bottom: 3px dotted #ffffff; 
 }
 
-/* Bento Box Section */
+/* Styling for Bento Box */
 #Bento-Box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, minmax(20px, 70%)); /* Ensure rows fit the content */
     gap: 10px;
-    padding: 20px;
-    background-color: rgb(240, 240, 240); /* Optional: background color */
+    padding: 5px;
+    background-color: rgb(169, 168, 168);
 }
 
-/* Bento Box Item */
+/* Styling for Bento Items */
 .bento-item {
-    overflow: hidden; /* Ensure images don't overflow their container */
-    border-radius: 8px; /* Optional: rounded corners */
+    overflow: hidden;
+    border-radius: 10px; 
 }
 
 .bento-item img {
-    width: 100%; /* Make image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space from images */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+}
+/* Additional Adjustments for Items */
+#Hashbrown {
+    grid-column: 2;  
+    grid-row: span 3; 
+}
+
+#porridge {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content:baseline;
+}
+
+#soup {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#coffee {
+    grid-column: 3;
+    grid-row: 2 / span 2;    
+}
+
+#wrap {
+    grid-column: 3;
+    grid-row: 1;  
+}
+
+/* Ensure Goals Section has no top margin */
+#Goals {
+    margin: 0; /* Remove any top margin */
+    padding: 20px; /* Add padding if needed */
+    background-color: rgb(255, 255, 255); /* Optional: background color for visibility */
 }
 
