@@ -1,10 +1,9 @@
-/* Reset default body margin and padding */
 body {
     margin: 0;
     padding: 0;
 }
 
-/* Import the custom font */
+/* Import font */
 @font-face {
     font-family: 'refuseniks';
     src: url('./fonts/refuseniks-Regular-BF66e3a35fb567e.otf') format('opentype');
@@ -26,15 +25,70 @@ body {
     font-style: normal;
 }
 
+#NavBar {
+    height: 10vh; /* Keep this as the primary height */
+    width: 100%;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(50, 50, 50);
+    border-bottom: #000000 3px solid;
+    top: 0; /* Makes sure the sticky behavior works */
+    padding: 0; /* Remove bottom padding for accurate height */
+    box-sizing: border-box; /* Ensures padding doesn't affect the height */
+}
+
+#Logo h1 {
+    font-family: 'refuseniks', sans-serif;
+    font-size: 4vh; 
+    color: rgb(255, 255, 255);
+    margin-left: 3vw; 
+}
+
+#nav-CoffeeGrinder {
+    font-family: 'refuseniks', sans-serif;
+    font-size: 4vh; 
+    color: rgb(243, 119, 18);
+    margin-right: 3vw; 
+}
+
+#NavBar ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+#NavBar ul li {
+    display: inline-block;
+    font-family: 'refuseniks', sans-serif;
+    font-size: 2.5vh; 
+    color: rgb(255, 255, 255);
+    padding-right: 3vw;
+    cursor: pointer;
+}
+
+#NavBar ul li a:visited {
+    color: white; 
+}
+
+#NavBar ul li a:hover {
+    color: rgb(243, 119, 18); 
+}
+
+#NavBar ul li a:active {
+    color: white; /* Color for active (clicked) links */
+}
+
+
 /* Styling the Banner */
 #Banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50vh;  /* Set height relative to viewport height */
+    height: 50vh;  
 }
 
-/* Styling the Banner Title */
 #Title-Section {
     width: 45%;
     padding-top: 5vh;
@@ -50,7 +104,6 @@ body {
     color: rgb(243, 119, 18);
 }
 
-/* Styling the Banner Image */
 #Banner-Image {
     width: 50%;                     
     height: 100%;                    
@@ -67,16 +120,15 @@ body {
 
 /* Styling the Menu Section */
 #Menu {
-    display: flex;                   /* Use Flexbox for centering */
-    flex-direction: column;          /* Stack children vertically */
-    align-items: center;             /* Horizontally center children */
-    justify-content: flex-start;     /* Align children to the top */
+    display: flex;                  
+    flex-direction: column;          
+    align-items: center;             
+    justify-content: flex-start;     
     height: 50vh;                    
     color: rgb(255, 255, 255);
     background-color: rgb(50, 50, 50);
 }
 
-/* Styling the Section Title */
 .Section-Title {
     font-family: 'refuseniks', sans-serif;
     font-size: 3vh;
@@ -95,7 +147,8 @@ body {
 #Drinks-Section, #Food-Section {
     font-family: 'refuseniks', sans-serif;
     font-weight: bold;
-    width: 50%;                     
+    width: 50%;     
+    padding-top: 5px;                
 }
 
 ul li {
@@ -124,18 +177,20 @@ ul li {
 /* Styling for Bento Box */
 #Bento-Box {
     width: 100%;
+    height: 60vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(3, minmax(20px, 100%)); /* Ensure rows fit the content */
+    grid-template-rows: repeat(3, minmax(20px, 100%)); 
     gap: 10px;
     padding: 5px;
-    background-color: rgb(169, 168, 168);
+    background-color: rgb(255, 244, 244);
+    scroll-margin-top: 10vh;
 }
 
-/* Styling for Bento Items */
 .bento-item {
     overflow: hidden;
     border-radius: 10px; 
+    border: black solid px;
 }
 
 .bento-item img {
@@ -159,12 +214,12 @@ ul li {
 
 #soup {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 3;
 }
 
 #iced-Coffee{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 1 / span 2;
 }
 
 #coffee {
@@ -180,7 +235,7 @@ ul li {
 #Information {
     width: 100%;
     margin: 0 auto;                 
-    padding: 20px; 
+    padding: 5%; 
     background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
@@ -227,7 +282,7 @@ ul li {
 #Goals {
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5%; 
     background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -239,6 +294,9 @@ ul li {
 #Goal-Img {
     grid-column: 1; 
     grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Goal-image {
@@ -263,4 +321,3 @@ ul li {
     font-size: 7vh;
     color: rgb(243, 119, 18);
 }
-
