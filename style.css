@@ -148,7 +148,7 @@ body {
     font-family: 'refuseniks', sans-serif;
     font-weight: bold;
     width: 50%;     
-    padding-top: 5px;                
+    padding-bottom: 5%;              
 }
 
 ul li {
@@ -320,4 +320,243 @@ ul li {
     font-weight: bold;
     font-size: 7vh;
     color: rgb(243, 119, 18);
+}
+
+/* Style for anything smaller than 1231px*/
+@media (max-width: 1231px){
+    #NavBar{
+        visibility: hidden;
+    }
+    
+    
+    
+    /* Styling the Banner */
+    #Banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50vh;  
+        width: 100%;
+    }
+    
+    #Title-Section {
+        width: 35%;
+        padding-top: 5vh;
+        margin-left: 5%;
+        font-family: 'refuseniks', sans-serif;
+        font-size: 2vh;
+        color: rgb(50, 50, 50);
+    }
+    
+    #CoffeeGrinder {
+        font-family: 'refuseniks';
+        font-size: 5vh;
+        color: rgb(243, 119, 18);
+    }
+    
+    #Banner-Image {
+        width: 100%;                     
+        height: 80%;                    
+    }
+    
+    #Banner-Image img {
+        max-height: 100%;                
+        width: auto;                     
+        object-fit: contain;             
+    }
+    
+    /* Styling the Menu Section */
+    #Menu {
+        display: flex;                  
+        flex-direction: column;          
+        align-items: center;             
+        justify-content: flex-start;     
+        height: 55vh;                    
+        color: rgb(255, 255, 255);
+        background-color: rgb(50, 50, 50);
+    }
+    
+    .Section-Title {
+        font-family: 'refuseniks', sans-serif;
+        font-size: 3vh;
+        color: rgb(243, 119, 18);
+        text-align: center;             
+    }
+    
+    .Menu-Contents {
+        font-family: refuseniks, sans-serif;
+        width: 90%;                     
+        display: flex;                 
+        justify-content: space-between; 
+        align-items: flex-start;      
+    }
+    
+    #Drinks-Section, #Food-Section {
+        font-family: 'refuseniks', sans-serif;
+        font-weight: bold;
+        width: 50%;     
+        padding-top: 5px;                
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    .item-content {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px dotted #ffffff;
+        padding: 5px 0;
+    }
+    
+    .item-name {
+        font-size: 16px;
+    }
+    
+    .item-price {
+        margin-left: 10px;
+    }
+    
+    #Food-Section .item-content {
+        border-bottom: 3px dotted #ffffff; 
+    }
+    
+    /* Styling for Bento Box */
+    #Bento-Box {
+        width: 100%;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, minmax(20px, 100%)); 
+        gap: 10px;
+        padding: 5px;
+        background-color: rgb(255, 244, 244);
+        scroll-margin-top: 10vh;
+    }
+    
+    .bento-item {
+        overflow: hidden;
+        border-radius: 10px; 
+        border: black solid px;
+    }
+    
+    .bento-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover; 
+    }
+    
+    #Hashbrown {
+        grid-column: 2;  
+        grid-row: span 3; 
+    }
+    
+    #porridge {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        justify-content:baseline;
+    }
+    
+    #soup {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    #iced-Coffee{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    
+    #coffee {
+        grid-column: 3;
+        grid-row: 2 / span 2;    
+    }
+    
+    #wrap {
+        grid-column: 3;
+        grid-row: 1;  
+    }
+    
+    #Information {
+        width: 100%;
+        margin: 0 auto;                 
+        padding: 5%; 
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: 1, 1fr;  
+        grid-template-rows: 1,1fr;
+        gap: 20px;                       
+        box-sizing: border-box;         
+    }
+    
+    #Information-Section{
+        grid-row: 1;
+        font-family: 'refuseniks', sans-serif;
+        font-size: 3vh;
+        color: rgb(50, 50, 50);
+    }
+    
+    #Information-Section h1{
+        font-family: 'refuseniks', sans-serif;
+        font-weight: bold;
+        font-size: 7vh;
+        color: rgb(243, 119, 18);
+    }
+    
+    #Highlight{
+        font-family: 'refuseniks', sans-serif;
+        font-weight: normal;
+        font-size: 3vh;
+        color: rgb(243, 119, 18);
+    }
+    
+    * {
+        box-sizing: border-box;          
+    }
+    
+    #Information-Image {
+        display: none;                    
+    }
+    
+    .info-image {
+        overflow: hidden;
+        border-radius: 10px; 
+        width: 100%;                     
+        height: auto;
+        visibility: hidden;
+    }
+    
+    #Goals {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5%; 
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;             
+        box-sizing: border-box;
+    }
+    
+    .Goal-image {
+        visibility: hidden;
+    }
+    
+    #Goal-Section {
+        font-family: 'refuseniks', sans-serif;
+        font-size: 3vh;
+        color: rgb(50, 50, 50);
+        grid-column: 2;  
+        align-self: center;  
+    }
+    
+    #Goal-Section h1 {
+        font-family: 'refuseniks', sans-serif;
+        font-weight: bold;
+        font-size: 7vh;
+        color: rgb(243, 119, 18);
+    }
+    
 }
