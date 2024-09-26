@@ -1,3 +1,4 @@
+@media (min-width: 1025px){
 body {
     margin: 0;
     padding: 0;
@@ -34,9 +35,9 @@ body {
     align-items: center;
     background-color: rgb(50, 50, 50);
     border-bottom: #000000 3px solid;
-    top: 0; /* Makes sure the sticky behavior works */
-    padding: 0; /* Remove bottom padding for accurate height */
-    box-sizing: border-box; /* Ensures padding doesn't affect the height */
+    top: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 #Logo h1 {
@@ -127,6 +128,7 @@ body {
     height: 50vh;                    
     color: rgb(255, 255, 255);
     background-color: rgb(50, 50, 50);
+    scroll-margin-top: 10vh;
 }
 
 .Section-Title {
@@ -176,16 +178,18 @@ ul li {
 
 /* Styling for Bento Box */
 #Bento-Box {
+    box-sizing: border-box; /* Add this */
     width: 100%;
     height: 60vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(3, minmax(20px, 100%)); 
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(20px, 100%));
+    gap: 8px;
     padding: 5px;
     background-color: rgb(255, 244, 244);
     scroll-margin-top: 10vh;
 }
+
 
 .bento-item {
     overflow: hidden;
@@ -314,6 +318,7 @@ ul li {
     grid-column: 2;  
     align-self: center;  
 }
+}
 
 #Goal-Section h1 {
     font-family: 'refuseniks', sans-serif;
@@ -322,13 +327,96 @@ ul li {
     color: rgb(243, 119, 18);
 }
 
-/* Style for anything smaller than 1231px*/
-@media (max-width: 1231px){
-    #NavBar{
-        visibility: hidden;
+/* Style for anything smaller than 1024px*/
+@media (max-width: 1024px){
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* Import font */
+    @font-face {
+        font-family: 'refuseniks';
+        src: url('./fonts/refuseniks-Regular-BF66e3a35fb567e.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'refuseniks';
+        src: url('./fonts/refuseniks-Bold-BF66e3a35f13c43.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'refuseniks';
+        src: url('./fonts/refuseniks-Thin-BF66e3a35fdbfa2.otf') format('opentype');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    #NavBar {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        position: sticky;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(50, 50, 50);
+        border-bottom: #000000 3px solid;
+        top: 0;
+        box-sizing: border-box;
+    }
+
+    #Logo h1 {
+        font-family: 'refuseniks', sans-serif;
+        font-size: 2.5vh; 
+        color: rgb(255, 255, 255);
+        margin-left: 3vw; 
     }
     
+    #nav-CoffeeGrinder {
+        font-family: 'refuseniks', sans-serif;
+        font-size: 3vh; 
+        color: rgb(243, 119, 18);
+        margin-right: 3vw; 
+    }
     
+    #NavBar ul {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+    }
+    
+    #NavBar ul li {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        font-family: 'refuseniks', sans-serif;
+        font-size: 2vh; 
+        color: rgb(255, 255, 255);
+        padding-right: 3vw;
+        cursor: pointer;
+    }
+    
+    #NavBar ul li a:visited {
+        color: white; 
+    }
+    
+    #NavBar ul li a:hover {
+        color: rgb(243, 119, 18); 
+    }
+    
+    #NavBar ul li a:active {
+        color: white; /* Color for active (clicked) links */
+    }
+
+    #Goals-Link{
+        display: none;
+    }
     
     /* Styling the Banner */
     #Banner {
@@ -371,9 +459,14 @@ ul li {
         flex-direction: column;          
         align-items: center;             
         justify-content: flex-start;     
-        height: 55vh;                    
+        height: 50vh;            
+        width: 100%;        
         color: rgb(255, 255, 255);
         background-color: rgb(50, 50, 50);
+        overflow-x: hidden;
+        box-sizing: border-box;
+        scroll-margin-top: 7vh;
+
     }
     
     .Section-Title {
@@ -385,17 +478,22 @@ ul li {
     
     .Menu-Contents {
         font-family: refuseniks, sans-serif;
-        width: 90%;                     
-        display: flex;                 
-        justify-content: space-between; 
-        align-items: flex-start;      
+        width: 100%;                     
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);                     
     }
     
-    #Drinks-Section, #Food-Section {
+    #Drinks-Section {
         font-family: 'refuseniks', sans-serif;
-        font-weight: bold;
-        width: 50%;     
-        padding-top: 5px;                
+        font-weight: bold;      
+        width: 80%;
+        padding: 5px;             
+    }
+
+    #Food-Section{
+        font-family: 'refuseniks', sans-serif;
+        font-weight: bold; 
+        width: 80%;                
     }
     
     ul li {
@@ -406,15 +504,14 @@ ul li {
         display: flex;
         justify-content: space-between;
         border-bottom: 3px dotted #ffffff;
-        padding: 5px 0;
-    }
+        padding: 5px 0;}
     
     .item-name {
         font-size: 16px;
     }
     
     .item-price {
-        margin-left: 10px;
+        margin-left: 8px;
     }
     
     #Food-Section .item-content {
@@ -428,10 +525,10 @@ ul li {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         grid-template-rows: repeat(3, minmax(20px, 100%)); 
-        gap: 10px;
-        padding: 5px;
+        padding-top: 10px;
+        gap: 8px;
         background-color: rgb(255, 244, 244);
-        scroll-margin-top: 10vh;
+        scroll-margin-top: 7vh;
     }
     
     .bento-item {
@@ -480,82 +577,58 @@ ul li {
     }
     
     #Information {
-        width: 100%;
-        margin: 0 auto;                 
-        padding: 5%; 
+        width: 98%;
         background-color: rgb(255, 255, 255);
-        display: grid;
-        grid-template-columns: 1, 1fr;  
-        grid-template-rows: 1,1fr;
-        gap: 20px;                       
-        box-sizing: border-box;         
+        word-wrap: break-word;
     }
     
     #Information-Section{
-        grid-row: 1;
+        width: 100vw;
         font-family: 'refuseniks', sans-serif;
-        font-size: 3vh;
+        font-size: 2.5vh;
         color: rgb(50, 50, 50);
     }
     
     #Information-Section h1{
         font-family: 'refuseniks', sans-serif;
         font-weight: bold;
-        font-size: 7vh;
+        font-size: 5vh;
         color: rgb(243, 119, 18);
     }
     
     #Highlight{
         font-family: 'refuseniks', sans-serif;
         font-weight: normal;
-        font-size: 3vh;
+        font-size: 2.5vh;
         color: rgb(243, 119, 18);
     }
     
-    * {
-        box-sizing: border-box;          
-    }
-    
-    #Information-Image {
+    #Information-Img {
         display: none;                    
     }
-    
-    .info-image {
-        overflow: hidden;
-        border-radius: 10px; 
-        width: 100%;                     
-        height: auto;
-        visibility: hidden;
-    }
-    
+
     #Goals {
-        width: 100%;
-        margin: 0 auto;
-        padding: 5%; 
+        width: 98%;
+        padding: 5px;
         background-color: rgb(255, 255, 255);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        align-items: center;             
-        box-sizing: border-box;
+        word-wrap: break-word;
     }
     
     .Goal-image {
-        visibility: hidden;
+        display: none;
     }
     
     #Goal-Section {
+        width: 100%;
         font-family: 'refuseniks', sans-serif;
-        font-size: 3vh;
-        color: rgb(50, 50, 50);
-        grid-column: 2;  
-        align-self: center;  
+        font-size: 2.5vh;
+        color: rgb(50, 50, 50); 
     }
     
     #Goal-Section h1 {
         font-family: 'refuseniks', sans-serif;
         font-weight: bold;
-        font-size: 7vh;
+        font-size: 5vh;
         color: rgb(243, 119, 18);
     }
     
