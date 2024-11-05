@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="NavBar">
+        <div id="Logo">
+            <h1>Coffee <span id="nav-CoffeeGrinder">Grinder</span></h1>
+        </div>
+        <div id="NavLinks">
+            <ul>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Bento-Box">Our Pictures</a></li>
+                <li><a href="#Information">Information</a></li>
+                <li><a href="#Goals" id="Goals-Link">Goals</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="view">
     <div id="Banner">
         <div id="Title-Section">
             <h2>Welcome To <br><span id="CoffeeGrinder">Coffee Grinder</span></h2>
@@ -44,10 +59,41 @@
         </div>
     </div>
     <div id="Bento-Box">
-        <div class="bento-item"><img src="images/hashbrown.jpg" alt="Description 1"></div>
-        <div class="bento-item"><img src="images/porridge.jfif" alt="Description 2"></div>
-        <div class="bento-item"><img src="images/Soup.jpg" alt="Description 3"></div>
-        <div class="bento-item"><img src="images/pic4.jpg" alt="Description 4"></div>
-    </div>    
+        <div class="bento-item" id="Hashbrown"><img src="images/hashbrown.jpg" alt="Hashbrown Waffles"></div>
+        <!---<div class="bento-item" id="porridge"><img src="images/porridge.jfif" alt="Porridge"></div>-->
+        <div class="bento-item" id="iced-Coffee"><img src="images/iced coffee.jpg" alt="ice coffee"></div>   
+        <div class="bento-item" id="soup"><img src="images/Soup.jpg" alt="Soup of the Day"></div>
+        <div class="bento-item" id="coffee"><img src="images/coffee.png" alt="Description 4"></div>
+        <div class="bento-item" id="wrap"><img src="images/chicken-wrap.jpg" alt="Description 4"></div>
+    </div>
+
+    <div id="Information">
+        <div id="Information-Section">
+            <h1>Who Are We?</h1>
+            <p>Nestled in the heart of the community,
+               our cafe is more than just a place to grab coffee — it’s a space where conversations flow, laughter echoes, and new memories are brewed.
+               we believe in serving more than just food and drink — we at <span id="Highlight"> Coffee Grinder</span> like to serve comfort, connection, and a little joy in every sip and bite.</p>
+        </div>
+        <div id="Information-Img">
+            <img src="images/building.png" class="info-image" alt="Information Image">
+        </div>
+    </div>
+
+    <div id="Goals">
+        <div id="Goal-Section">
+            <h1>Our Goals</h1>
+            <p>Our coffee shop aims to bring people together and create a welcoming space for connection. 
+               It's a place where students can study with a cup of coffee, and professionals can unwind and socialize after work. 
+               If you're here to focus or meet with friends, we want everyone to feel at home and enjoy the atmosphere we’ve created for both work and relaxation.
+            </p>
+        </div>
+        <div id="Goal-Img">
+            <img src="images/toaster.JPG" class="Goal-image" alt="Information Image">
+        </div>
+    </div>
+    </div>
+    
+    
+    
 </body>
 </html>
