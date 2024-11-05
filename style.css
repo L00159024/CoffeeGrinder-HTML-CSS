@@ -318,6 +318,10 @@ ul li {
     grid-column: 2;  
     align-self: center;  
 }
+
+.bento-item:hover {
+    transform: scale(1.1); 
+    transition: transform 0.5s; 
 }
 
 #Goal-Section h1 {
@@ -632,4 +636,5 @@ ul li {
         color: rgb(243, 119, 18);
     }
     
+}
 }
